@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+triangle.html
+Erik Fredericks, c/o Ed Angel
+
+The triangular hello world of WebGL
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Define our shaders -->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+uniform float x;
+uniform float y;
+
+void main() {
+  gl_Position.x += x + vPosition.x;
+  gl_Position.y += y + vPosition.y;
+  gl_Position.z = 0.0;
+  gl_Position.w = 1.0;
+}
+</script>
+    <script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+
+void main() {
+  gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+}
+</script>
+    <link rel="stylesheet" href="./styles.css?v=1.0">
+
+    <script src="./scripts/webgl-utils.js"></script>
+    <script src="./scripts/initShaders.js"></script>
+    <script src="./scripts/MV.js"></script>
+
+    <script src="./scripts/triangle-anim.js"></script>
+
+</head>
+
+<body style="background-color: black;">
+    <canvas id="gl-canvas" width="640" height="480" style="margin: 0 auto; display: block;">
+        Your browser doesn't support HTML5!
+    </canvas>
+    <h1>triangle</h1>
+    <p>it's a triangle</p>
+</body>
+
+</html>

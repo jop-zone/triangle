@@ -1,0 +1,17 @@
+h1 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: center;
+    font-size: 6rem;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+p {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: center;
+    font-size: 1rem;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
